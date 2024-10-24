@@ -1,0 +1,156 @@
+.navbar{
+width: 100%;
+height: 25vh;
+display: flex;
+flex-direction: column;
+}
+
+.header{
+  width: 100%;
+  /* height: 18vh; */
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  margin-top: 15px;
+  border-radius: 6px;
+}
+
+.header h1{
+  font-size: 42px;
+}
+
+.rotate{
+  font-size: 21px;
+  transform: rotate(-90deg);
+}
+
+  .nav-menu{
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    
+  }
+  li{
+    list-style-type: none;
+    padding: 3px;
+  }
+  .navlink{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .hamburger{
+    display: none;
+  }
+
+  .bar{
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.5s ease-in-out;
+  }
+
+  @media screen and (max-width:1100px) {
+    .nav-menu{
+      gap: 60px;
+    }
+  }
+
+  @media screen and (max-width:950px) {
+    .nav-menu{
+      gap: 40px;
+    }
+  }
+
+  @media screen and (max-width:800px) {
+    .nav-menu{
+      gap: 30px;
+    }
+  }
+
+  @media screen and (max-width:600px) {
+      .navbar{
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 3px solid blueviolet;
+      }
+
+      nav{
+        width: 45px;
+        padding: 5px;
+        background-color: blueviolet;
+
+      }
+
+      .hamburger{
+        display: block;
+      }
+
+      .hamburger.hamActive .bar:nth-child(2){
+        opacity: 0;
+      }
+      .hamburger.hamActive .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+      }
+      .hamburger.hamActive .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      .nav-menu{
+        position: fixed;
+        top: -100%;
+        left: 7%;
+        width: 90%;
+        gap: 0;
+        flex-direction: column;
+        transition: 0.5s;
+        background-color: antiquewhite;
+        text-align: center;
+      }
+
+      .nav-item{
+        margin: 8px 0;
+      }
+
+      .nav-menu.hamActive{
+        top: 115px;
+        margin: auto;
+      }
+  }
+
+  .bollywood-image{
+    width: 40%;
+    height: 50vh;
+  }
+
+  .hollywood-image{
+    width: 40%;
+    height: 50vh;
+  }
+
+  .fitness-image{
+    width: 40%;
+    height: 50vh;
+  }
+
+  .food-image{
+    width: 40%;
+    height: 50vh;
+  }
+
+  .technology-image{
+    width: 40%;
+    height: 50vh;
+  }
