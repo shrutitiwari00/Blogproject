@@ -4,6 +4,9 @@ import Datacontext from '../../Datacontext'
 import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
+import Topfitness from './Topfitness'
+import Advertisement from './Advertisement'
+// import Footer from './Footer'
 
 const Fitness = () => {
 
@@ -23,17 +26,38 @@ const Fitness = () => {
   return (
     <>
     <Navbar/>
+    <div className='fitness-page'>
+     <div className='fitness'>
+    <div className='fitness-line'>
+        <h1 className='fitness-text'>Fitness</h1>
+        <hr/> 
+        </div>
+
     {fitnessData.slice(0,visisble).map((item)=>(
     <div>
-    <Link to={`/detail/${item.id}`}><img src={item.img_url} alt={item.title} className='fitness-image' />
-      <h2>{item.title}</h2>
-      <p>{item.description}</p>
+    <Link to={`/detail/${item.id}`} className='link-fitness'>
+    <div className='fitnessbox'>
+    <img src={item.img_url} alt={item.title} className='fitness-image' />
+      <h2 className='fitness-title'>{item.title}</h2>
+      <p className='fitness-description'>{item.description}</p>
+      </div>
       </Link>
       </div>
       ))}
 
-      <button onClick={handleload}>LoadMore</button>
-      
+      <button onClick={handleload} className='button'>LoadMore</button>
+      </div>
+
+      <div className='topfitness'>
+        <div className='fitness-line'>
+        <h1 className='fitness-text'>Top Posts</h1>
+        <hr/>
+        </div>
+      <Topfitness/>
+      <Advertisement className='adver'/>
+      </div>
+      </div>
+      {/* <Footer/> */}
     </>
   )
 }

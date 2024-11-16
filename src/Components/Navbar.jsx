@@ -44,16 +44,40 @@ const Navbar = () => {
     <div className='navbar'>
       <div className='header'>
         <span className='rotate'>The</span>
-        <h1>Siren</h1>
+        <h1 className='siren'>Siren</h1>
       </div>
     <nav>
       <ul className='nav-menu'>
-        <li className='nav-item'><NavLink  to="/" className='navlink'>Home</NavLink></li>
-         <li className='nav-item'><NavLink to="/bollywood"  className='navlink'>Bollywood</NavLink></li>
-         <li className='nav-item'><NavLink to="/technology"  className='navlink' >Technology</NavLink></li>
-         <li className='nav-item'><NavLink to="/hollywood"  className='navlink'>Hollywood</NavLink></li>
-         <li className='nav-item'><NavLink to="/Fitness"  className='navlink'>Fitness</NavLink></li>
-         <li className='nav-item'><NavLink to="/Food"  className='navlink'>Food</NavLink></li>
+        <li className='nav-item'>
+          <NavLink  to="/" className='navlink' style={({isActive})=>({color:isActive? "orangered":"white"})}>
+          Home
+          </NavLink>
+          </li>
+         <li className='nav-item'>
+          <NavLink to="/bollywood"  className='navlink' style={({isActive})=>({color:isActive? "orangered":"white"})}>
+          Bollywood
+          </NavLink>
+          </li>
+         <li className='nav-item'>
+          <NavLink to="/technology"  className='navlink' style={({isActive})=>({color:isActive? "orangered":"white"})}>
+          Technology
+          </NavLink>
+          </li>
+         <li className='nav-item'>
+          <NavLink to="/hollywood"  className='navlink' style={({isActive})=>({color:isActive? "orangered":"white"})}>
+          Hollywood
+          </NavLink>
+          </li>
+         <li className='nav-item'>
+          <NavLink to="/Fitness"  className='navlink' style={({isActive})=>({color:isActive? "orangered":"white"})}>
+          Fitness
+          </NavLink>
+          </li>
+         <li className='nav-item'>
+          <NavLink to="/Food"  className='navlink' style={({isActive})=>({color:isActive? "orangered":"white"})}>
+          Food
+          </NavLink>
+          </li>
       </ul>
 
       <div className='hamburger'>
@@ -64,7 +88,6 @@ const Navbar = () => {
 
       </nav>
 
-      <hr/>
 
       </div>
     </>
