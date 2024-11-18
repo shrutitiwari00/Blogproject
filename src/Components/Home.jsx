@@ -8,8 +8,8 @@ import Tophome from './Tophome'
 import Advertisement from './Advertisement'
 
 const Home = () => {
-  const [visisble, setVisible] = useState(7);
-  const[show,setShow]= useState(3);
+  // const [visisble, setVisible] = useState(7);
+  // const[show,setShow]= useState(3);
   const data = useContext(Datacontext);
   console.log(data);
 
@@ -122,7 +122,7 @@ const Home = () => {
               <hr />
             </div>
 
-            {data.slice(0, visisble).map((item) => (
+            {data.slice(0, 10).map((item) => (
               <div key={item.id}>
                 <Link to={`/detail/${item.id}`} className='link-bolly'>
                   <div className='bollybox'>
@@ -137,7 +137,7 @@ const Home = () => {
                 </Link>
               </div>
             ))}
-            {/* {show<bollyM */}
+            
             {/* <button onClick={handleload} className='button'>Load More</button> */}
           </div>
 
@@ -146,11 +146,11 @@ const Home = () => {
               <h1 className='bolly-text'>Top Posts</h1>
               <hr />
             </div>
-            <div className='top-div'>
+            <div className='tp-box'>
               <Tophome />
             </div>
             <div>
-              <Advertisement className='adver' show={show}/>
+              <Advertisement className='adver'/>
             </div>
           </div>
         </div>

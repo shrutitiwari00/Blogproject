@@ -3,98 +3,293 @@ body {
     margin: 0;
     padding: 0;
   }
-  
-  .post-detail {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+
+  .head{
+    width: 100%;
+    /* height: 18vh; */
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    /* padding: 3px; */
+    margin-top: 15px;
+    border-radius: 6px;
   }
   
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+  
+  
+  .vertical{
+    font-size: 40px;
+    font-weight: 600;
+    color: orangered;
+    transform: rotate(-90deg);
+    background-color: black;
+    border-radius: 10px;
+  }
+  
+  .sir{
+    color: black;
+    font-size: 70px;
+    /* font-weight: 700; */
+  }
+  
+  .post-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+  }
+
+  .post-detail {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* padding: 20px; */
+    /* margin: 0 auto; */
+  }
+  
+  .post-title {
+    font-size: 40px;
+    margin: 10px;
+    /* margin-bottom: 20px; */
   }
   
   .post-image {
-    width: 100%;
-    max-width: 600px;
+    /* width: 95%;
+    height: 60vh; */
+    /* position: relative;  */
+    width: 97%;
     height: auto;
+    /* display: block; */
     margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    margin: 10px;
   }
   
-  p {
-    font-size: 1rem;
+  .post-description {
+    width: 95%;
+    font-size: 30px;
     line-height: 1.6;
+    margin: 10px;
   }
   
   /* Back Button Styling */
   .back-button {
-    background-color: #007bff;
+    background-color:black;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 1.5rem;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin: 20px;
     transition: background-color 0.3s;
   }
   
   .back-button:hover {
-    background-color: #0056b3;
+    background-color: white;
+    color: black;
+  }
+
+  .latest-section{
+    width: 97%;
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* margin: 10px ; */
+    /* padding: 10px 15px; */
+
+  }
+  .latest-text{
+    margin-left: 50px;
+    /* padding: 15px; */
+  }
+  .latest-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .latest-box{
+    width: 30%;
+    /* height: 30vh; */
+    margin: 10px;
+    /* box-shadow: 10px 10px 5px ghostwhite; */
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+  .la-box{
+    display: flex;
+    flex-direction: column;
+   padding: 10px;
+  }
+  .latest-image{
+    width: 100%;
+    height: 35vh;
+    margin-bottom: 10px;
+    
+  }
+ 
+  .latest-title{
+    color: black;
+    margin-bottom: 10px;
+  }
+  .latest-title:hover{
+    color: #AE445A;
+  }
+
+  .latest-description{
+    color: black ;
+  }
+  .latest-description:hover{
+    color: #A64D79;
+  }
+  .detail-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .user-details{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    /* padding-top: 5px; */
+  }
+
+  .icon-box {
+    height: 5vh;
+    display: flex;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    margin: 15px;
   }
   
+  .social-icon {
+    font-size: 20px;
+    color: #fff; 
+    transition: transform 0.3s, color 0.3s;
+    cursor: pointer;
+  }
+  
+  .social-icon:hover {
+    color: #007bff; 
+    transform: scale(1.2); 
+  }
+  
+  .like-share-box {
+    position: fixed;
+    top: 60%;
+    left: 100px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+   z-index: -1;
+  }
+  
+  .like-share-icon {
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .like-share-icon:hover {
+    color: #007bff; /* Change to a hover color */
+    transform: scale(1.2); /* Slight enlarge on hover */
+  }
+  
+
   /* Footer Styles */
-  .footer-post {
+  /* .footer-post {
     margin-top: 40px;
     font-size: 0.9rem;
     text-align: center;
     color: #777;
+  } */
+  
+  /* General mobile styles for small screens */
+@media (max-width: 768px) {
+  /* Adjust the like-share box */
+  .like-share-box {
+    left: 5px; /* Reduce the left offset */
+    padding: 8px;
+    gap: 15px; /* Reduce the spacing between icons */
+    background-color: rgba(255, 255, 255, 0.95);
   }
-  
-  /* Mobile & Tablet Responsive Styles */
-  @media (max-width: 768px) {
-    .post-detail {
-      padding: 15px;
-    }
-  
-    h1 {
-      font-size: 1.8rem;
-    }
-  
-    .back-button {
-      font-size: 1rem;
-      padding: 8px 16px;
-    }
-  
-    .post-image {
-      max-width: 100%;
-    }
-  
-    p {
-      font-size: 0.9rem;
-    }
+
+  .like-share-icon {
+    font-size: 20px; /* Reduce icon size */
   }
-  
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 1.5rem;
-    }
-  
-    .post-detail {
-      padding: 10px;
-    }
-  
-    .back-button {
-      font-size: 0.9rem;
-      padding: 6px 12px;
-    }
-  
-    .post-image {
-      max-width: 100%;
-    }
-  
-    p {
-      font-size: 0.85rem;
-    }
+
+  /* Adjust the social media icon box */
+  .icon-box {
+    top: 5px;
+    right: 5px;
+    padding: 6px 10px;
   }
-  
+
+  .social-icon {
+    font-size: 18px; /* Reduce icon size */
+  }
+
+  /* Adjust the post image and text */
+  .post-image {
+    width: 100%; /* Ensure the image is responsive */
+    height: auto;
+  }
+
+  .post-title {
+    font-size: 1.5rem; /* Smaller title font size */
+    text-align: center; /* Center align title */
+  }
+
+  .post-description {
+    font-size: 1rem; /* Adjust font size for readability */
+    padding: 0 10px; /* Add padding for better spacing */
+  }
+
+  /* Adjust the latest section */
+  .latest-div {
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Add spacing between sections */
+  }
+
+  .latest-box {
+    width: 100%; /* Full width for each box */
+  }
+
+  .latest-image {
+    width: 100%; /* Make images responsive */
+    height: auto;
+  }
+
+  .latest-title {
+    font-size: 1.2rem; /* Smaller title font size */
+  }
+
+  .latest-description {
+    font-size: 0.9rem; /* Smaller description font size */
+  }
+
+  /* Footer adjustments */
+  .footer {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}

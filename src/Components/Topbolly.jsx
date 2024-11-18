@@ -8,8 +8,8 @@ const Topbolly = ({show}) => {
     const data = useContext(Datacontext);
     console.log(data);
 
-    const bollywoodData1 = data.filter((item) => item.category === "Bollywood");
-    console.log(bollywoodData1);
+    const bollywoodData = data.filter((item) => item.category === "Bollywood");
+    console.log(bollywoodData);
 
     // const bollywoodData2 = data.filter((item) => item.category === "Bollywood" && item.id === 79);
     // console.log(bollywoodData2);
@@ -24,13 +24,13 @@ const Topbolly = ({show}) => {
      //function to limit the discription
   const limitdescription = (text)=>{
     const words = text.split(' ');
-    return words.slice(0,15).join(' ') + (words.length > 15 ? '...':'');
+    return words.slice(0,10).join(' ') + (words.length > 10 ? '...':'');
   };
 
 
     return (
         <>
-            {bollywoodData1.slice(0,show).map((item) => (
+            {bollywoodData.slice(0,show).map((item) => (
                 <Link to={`/detail/${item.id}`} className='link-bolly'>
                 <div className='top-box'>
                     <div className='top-image'>

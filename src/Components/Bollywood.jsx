@@ -4,7 +4,6 @@ import Datacontext from '../../Datacontext'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import Topbolly from './Topbolly'
-import Advertisement from './Advertisement'
 import Footer from './Footer'
 
 
@@ -36,7 +35,7 @@ const Bollywood = () => {
   //function to limit the discription
   const limitdescription = (text)=>{
     const words = text.split(' ');
-    return words.slice(0,35).join(' ') + (words.length > 35 ? '...':'');
+    return words.slice(0,45).join(' ') + (words.length > 45 ? '...':'');
   };
 
   return (
@@ -133,14 +132,17 @@ const Bollywood = () => {
               <h1 className='bolly-text'>Top Posts</h1>
               <hr />
             </div>
-              <div>
+              <div className='tp-box'>
             <Topbolly show={show} />
             </div>
-            {/* <div>
-            <Advertisement className='adver' />
-            </div> */}
+           
           </div>
 
+        </div>
+        <div className='addd'>
+        <h1 className='advertisement-text'>Advertisement</h1>
+        <div className='adpic'>       
+        </div>
         </div>
       
       <div className="footer">

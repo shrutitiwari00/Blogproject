@@ -24,7 +24,7 @@ flex-direction: column;
 }
 
 .rotate{
-  font-size: 23px;
+  font-size: 30px;
   color: orangered;
   transform: rotate(-90deg);
 }
@@ -222,13 +222,13 @@ flex-direction: column;
     display: flex;
     justify-content: center;
     justify-items: center;
-    
+   
   }
 
   .bolly{
-    width: 55%;
+    width: 60%;
     
-    margin-top: 10px;
+    margin: 10px;
     padding: 10px 5px;
     display: flex;
     flex-direction: column;
@@ -237,18 +237,6 @@ flex-direction: column;
     gap: 15px;
   }
 
-  .topbolly{
-    width: 40%;
-    
-    margin-top: 10px;
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    /* align-items: center; */
-    gap: 20px;
-  }
- 
   .bolly-line{
     padding-left: 35px;
     
@@ -267,7 +255,7 @@ flex-direction: column;
   }
 
   .bollybox{
-    width: 80%;
+    width: 90%;
     height: 40vh;
    /* border: 1px solid black; */
     /* border-radius: 20px; */
@@ -280,25 +268,9 @@ flex-direction: column;
     align-items: center;
     gap: 10px;
   }
-  .top-box{
-    width: 80%;
-    height: 20vh;
-   /* border: 1px solid black; */
-    /* border-radius: 20px; */
-    box-shadow: 10px 10px 5px gainsboro;
-    /* padding: 10px; */
-    /* margin: 10px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
+  
   .image{
     width: 30% ;
-  }
-  .t-image{
-    width: 35% ;
   }
 
   .dis-text{
@@ -307,31 +279,11 @@ flex-direction: column;
     flex-direction: column;
     gap: 20px;
   }
-  .top-text{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
   
-  .t-title{
-    color: black;
-  }
-  .t-title:hover{
-    color: orangered;
-  }
-
-  .t-description{
-    color: black ;
-  }
-  .t-description:hover{
-    color: orangered;
-  }
   .bolly-text:hover{
      color: brown;
   }
   
-
   .bollywood-image{
     width: 100%;
     height: 30vh;
@@ -351,9 +303,86 @@ flex-direction: column;
   .bollywood-description:hover{
     color: orangered;
   }
-  .top-div{
+  /* .top-div{
     margin-bottom: 50px;
+  } */
+
+
+  .tp-box{
+   display: flex;
+   flex-direction: column;
+   gap: 7px;
   }
+
+  .topbolly{
+    width: 35%;
+    
+    margin: 10px;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    /* align-items: center; */
+    gap: 20px;
+  }
+
+  .top-box{
+    width: 90%;
+    height: 20vh;
+   /* border: 1px solid black; */
+    /* border-radius: 20px; */
+    box-shadow: 10px 10px 5px gainsboro;
+    /* padding: 10px; */
+    /* margin-bottom: 10px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .top-image{
+    width: 35%;
+  }
+  .top-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .t-image{
+    width: 100%;
+    height: 16vh;
+  }
+
+  .t-title{
+    color: #AE445A;
+  }
+  .t-description{
+    color: #B03052;
+  }
+
+  .addd{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .adpic{
+    width: 98%;
+    height: 35vh;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background-image: url(./adphoto.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+
 
   .latest-section{
     width: 100%;
@@ -410,319 +439,6 @@ flex-direction: column;
     color: #A64D79;
   }
 
-  /* Technology.jsx */
-  .tech-page{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-  }
-
-  .tech{
-    width: 60%;
-    height: 100vh;
-    margin-top: 10px;
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;    
-    gap: 15px;
-  }
-
-  .toptech{
-    width: 40%;
-    height: 100vh;
-    margin-top: 10px;
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .tech-line hr{
-    width: 65px;
-    color: orangered;
-    border-top : 1px solid orangered;
-    border-bottom : 1px solid orangered;
-  }
-
-  .link-tech{
-    list-style-type: none;
-    text-decoration: none;
-  }
-
-  .techbox{
-    width: 90%;
-    height: 75vh;
-   border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 10px 10px 5px gainsboro;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .tech-text:hover{
-     color: brown;
-  }
-  
-
-  .technology-image{
-    width: 60%;
-    height: 50vh;
-    border-radius: 15px;
-  }
-
-  .technology-title{
-    color: black;
-  }
-  .technology-title:hover{
-    color: orangered;
-  }
-
-  .technology-description{
-    color: black ;
-  }
-  .technology-description:hover{
-    color: orangered;
-  }
-
-  /* Hollywood.jsx */
-  .holly-page{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-  }
-
-  .holly{
-    width: 60%;
-    height: 100vh;
-    margin-top: 10px;
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;    
-    gap: 15px;
-  }
-
-  .topholly{
-    width: 40%;
-    height: 100vh;
-    margin-top: 10px;
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .holly-line hr{
-    width: 65px;
-    color: orangered;
-    border-top : 1px solid orangered;
-    border-bottom : 1px solid orangered;
-  }
-
-  .link-holly{
-    list-style-type: none;
-    text-decoration: none;
-  }
-
-  .hollybox{
-    width: 90%;
-    height: 75vh;
-   border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 10px 10px 5px gainsboro;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .holly-text:hover{
-     color: brown;
-  }
-  
-
-  .hollywood-image{
-    width: 60%;
-    height: 50vh;
-    border-radius: 15px;
-  }
-
-  .hollywood-title{
-    color: black;
-  }
-  .hollywood-title:hover{
-    color: orangered;
-  }
-
-  .hollywood-description{
-    color: black ;
-  }
-  .hollywood-description:hover{
-    color: orangered;
-  }
-
-  /* Fitness.jsx */
-  .fitness-page{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-  }
-
-  .fitness{
-    width: 60%;
-    height: 100vh;
-    margin-top: 10px;
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;    
-    gap: 15px;
-  }
-
-  .topfitness{
-    width: 40%;
-    height: 100vh;
-    margin-top: 10px;
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .fitness-line hr{
-    width: 65px;
-    color: orangered;
-    border-top : 1px solid orangered;
-    border-bottom : 1px solid orangered;
-  }
-
-  .link-fitness{
-    list-style-type: none;
-    text-decoration: none;
-  }
-
-  .fitnessbox{
-    width: 90%;
-    height: 75vh;
-   border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 10px 10px 5px gainsboro;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .fitness-text:hover{
-     color: brown;
-  }
-  
-
-  .fitness-image{
-    width: 60%;
-    height: 50vh;
-    border-radius: 15px;
-  }
-
-  .fitness-title{
-    color: black;
-  }
-  .fitness-title:hover{
-    color: orangered;
-  }
-
-  .fitness-description{
-    color: black ;
-  }
-  .fitness-description:hover{
-    color: orangered;
-  }
-
-   /* Food.jsx */
-  .food-page{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-  }
-
-  .food{
-    width: 60%;
-    height: 100vh;
-    margin-top: 10px;
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;    
-    gap: 15px;
-  }
-
-  .topfood{
-    width: 40%;
-    height: 100vh;
-    margin-top: 10px;
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .food-line hr{
-    width: 65px;
-    color: orangered;
-    border-top : 1px solid orangered;
-    border-bottom : 1px solid orangered;
-  }
-
-  .link-food{
-    list-style-type: none;
-    text-decoration: none;
-  }
-
-  .foodbox{
-    width: 90%;
-    height: 75vh;
-   border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 10px 10px 5px gainsboro;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .food-text:hover{
-     color: brown;
-  }
-  
-
-  .food-image{
-    width: 60%;
-    height: 50vh;
-    border-radius: 15px;
-  }
-
-  .food-title{
-    color: black;
-  }
-  .food-title:hover{
-    color: orangered;
-  }
-
-  .food-description{
-    color: black ;
-  }
-  .food-description:hover{
-    color: orangered;
-  }
-
-
   .button{
     width: 18%;
     background-color: olive;
@@ -747,14 +463,14 @@ flex-direction: column;
     100% {color:purple;}
   }
   .adbox{
-    width: 76%;
+    width: 80%;
     /* height: 40vh; */
     height: auto;
     /* border: 1px solid black;
     border-radius: 20px; */
-    /* box-shadow: 10px 10px 5px gainsboro; */
+    box-shadow: 10px 10px 5px gainsboro;
     padding: 10px;
-    /* margin: 10px; */
+    margin: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -764,17 +480,16 @@ flex-direction: column;
     width: 100%;
     height: 30vh;
     /* border-radius: 10px; */
-    box-shadow: 10px 10px 5px gainsboro;
-    margin-top: 10px;
-    padding: 10px 5px;
+    /* box-shadow: 10px 10px 5px gainsboro; */
+    /* margin-top: 10px; */
+     /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;  */
+    padding: 0px 10px 15px 10px;
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
 
-  .adbox h1:hover{
-    color: brown;
-  }
+  
 
   .footer{
     display: flex;
@@ -785,6 +500,7 @@ flex-direction: column;
     width: 90%;
     height: 40vh;
     background-color: #B6A28E ;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     /* border-radius: 20px; */
     display: flex;
     align-items: center;
@@ -829,3 +545,105 @@ flex-direction: column;
     border-radius: 5px;
     cursor: pointer;
   }
+
+
+  @media screen and (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .box {
+      width: 100%;
+      height: 180px;
+    }
+  
+    .latest-section .latest-box {
+      width: 100%;
+    }
+  
+    .bolly {
+      flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Media query for mobile phones (screens up to 480px) */
+@media screen and (max-width: 480px) {
+  .mainbody {
+    padding: 10px;
+  }
+
+  .header-container .box {
+    height: 150px;
+  }
+
+  .latest-section .latest-box {
+    padding: 5px;
+  }
+
+  .bollybox {
+    flex-direction: column;
+  }
+
+  .bollywood-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .bollywood-title, .bollywood-description {
+    font-size: 14px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-box {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .top-image {
+    width: 100%;
+    height: 180px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .t-title {
+    font-size: 16px;
+  }
+
+  .t-description {
+    font-size: 12px;
+  }
+}
+
+/* Responsive styles for mobile phones (screens up to 480px) */
+@media screen and (max-width: 480px) {
+  .top-box {
+    padding: 8px;
+  }
+
+  .top-image {
+    height: 120px;
+  }
+  .t-title {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .t-description {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .link-bolly {
+    text-decoration: none;
+  }
+}

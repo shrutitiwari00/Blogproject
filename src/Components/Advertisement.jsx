@@ -9,7 +9,7 @@ const AdItem = ({ description, imageUrl }) => (
 );
 
 
-const Advertisement = ({show}) => {
+const Advertisement = () => {
 
   const addddata = [
     {
@@ -42,26 +42,26 @@ const Advertisement = ({show}) => {
       imageUrl:
         "https://i.pinimg.com/originals/2b/e6/7f/2be67f3d885dead62682c01f0f6e8522.gif",
     },
-    {
-      id: 7,
-      title: "Ad Title 7",
+    // {
+    //   id: 7,
+    //   title: "Ad Title 7",
   
-      imageUrl:
-        "https://cdn.dribbble.com/users/404685/screenshots/1520557/finish_line-hd.gif",
-    },
-    {
-      id: 8,
-      title: "Ad Title 8",
+    //   imageUrl:
+    //     "https://cdn.dribbble.com/users/404685/screenshots/1520557/finish_line-hd.gif",
+    // },
+    // {
+    //   id: 8,
+    //   title: "Ad Title 8",
   
-      imageUrl:
-        "https://i.pinimg.com/originals/ff/d3/47/ffd347f47609af5162e3e824e66e7ecf.gif",
-    },
-    {
-      id: 9,
-      title: "Ad Title 9",
-      imageUrl:
-        "https://cdnb.artstation.com/p/assets/images/images/061/325/055/original/nj-himel-ezgif-com-optimize.gif?1680535912",
-    },
+    //   imageUrl:
+    //     "https://i.pinimg.com/originals/ff/d3/47/ffd347f47609af5162e3e824e66e7ecf.gif",
+    // },
+    // {
+    //   id: 9,
+    //   title: "Ad Title 9",
+    //   imageUrl:
+    //     "https://cdnb.artstation.com/p/assets/images/images/061/325/055/original/nj-himel-ezgif-com-optimize.gif?1680535912",
+    // },
   ];
 
   return (
@@ -69,7 +69,7 @@ const Advertisement = ({show}) => {
     
     <div className='adbox'>
        <h1 className='advertisement-text'>Advertisement</h1>
-       {addddata.slice(0,show).map((ad) => (
+       {addddata.slice(0,6).map((ad) => (
         <div className='ad-image'>
         {/* <img src={item.ad1} className='ad-image'/>
         <img src={item.ad2} className='ad-image'/>

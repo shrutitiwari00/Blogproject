@@ -5,12 +5,12 @@ import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import Topholly from './Topholly'
-import Advertisement from './Advertisement'
-
+import Footer from './Footer'
 
 const Hollywood = () => {
 
-  const [visisble, setVisible] = useState(5);
+  const [visisble, setVisible] = useState(3);
+  const[show,setShow] = useState(6);
 
   const data = useContext(Datacontext);
   console.log(data);
@@ -19,11 +19,19 @@ const Hollywood = () => {
   console.log(hollywoodData);
 
   const handleload = () => {
-    setVisible((prev)=>prev+5)
+    setVisible((prev)=>prev+3)
+    setShow((prev) => prev+6)
  }
+
+  //function to limit the discription
+  const limitdescription = (text)=>{
+    const words = text.split(' ');
+    return words.slice(0,45).join(' ') + (words.length > 45 ? '...':'');
+  };
 
   return (
     <>
+    <div className='mainbody'>
     <Navbar/>
     <div className='holly-page'>
     <div className='holly'>
@@ -47,13 +55,25 @@ const Hollywood = () => {
     <button onClick={handleload} className='button'>LoadMore</button>
      </div>
 
-     <div className='topholly'>
-        <div className='holly-line'>
-        <h1 className='holly-text'>Top Posts</h1>
+     <div className='topbolly'>
+        <div className='bolly-line'>
+        <h1 className='bolly-text'>Top Posts</h1>
         <hr/>
         </div>
-      <Topholly/>
-      <Advertisement className='adver'/>
+        <div className='tp-box'>
+          <Topholly show={show} />
+            </div>
+
+      </div>
+      
+      </div>
+      <div className='addd'>
+        <h1 className='advertisement-text'>Advertisement</h1>
+        <div className='adpic'>       
+        </div>
+        </div>
+      <div className="footer">
+      <Footer />
       </div>
       </div>
     </>
