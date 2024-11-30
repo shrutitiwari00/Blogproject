@@ -7,6 +7,7 @@ import Hollywood from './Components/Hollywood'
 import Fitness from './Components/Fitness'
 import Food from './Components/Food'
 import Categorydetail from './Components/Categorydetail'
+// import SearchResults from './Components/SearchResults'
 
 const Routerfile = () => {
   return (
@@ -20,6 +21,7 @@ const Routerfile = () => {
             <Route path='/fitness' element={<Fitness/>}/>
             <Route path='/food' element={<Food/>}/>
             <Route path='/detail/:id' element={<Categorydetail/>}></Route>
+            {/* <Route path="/search/:searchText" element={<SearchResults/>}></Route> */}
         </Routes>
      </Router>
    </>

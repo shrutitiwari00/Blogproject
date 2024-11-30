@@ -35,7 +35,11 @@ const Bollywood = () => {
   //function to limit the discription
   const limitdescription = (text)=>{
     const words = text.split(' ');
-    return words.slice(0,45).join(' ') + (words.length > 45 ? '...':'');
+    return words.slice(0,40).join(' ') + (words.length > 40 ? '...':'');
+  };
+  const limittitle = (text) => {
+    const words = text.split(' ');
+    return words.slice(0, 2).join(' ') + (words.length > 2 ? '...' : '');
   };
 
   return (
@@ -55,7 +59,7 @@ const Bollywood = () => {
                     <img src={item.img_url} alt={item.title} className='latest-image' />
                     
                     
-                    <h2 className='latest-title'>{item.title}</h2>
+                    <h2 className='latest-title'>{limittitle(item.title)}</h2>
 
                     <p className='latest-description'>{limitdescription(item.description)}</p>
                     
@@ -71,7 +75,7 @@ const Bollywood = () => {
                     <img src={item.img_url} alt={item.title} className='latest-image' />
                    
                     
-                    <h2 className='latest-title'>{item.title}</h2>
+                    <h2 className='latest-title'>{limittitle(item.title)}</h2>
 
                     <p className='latest-description'>{limitdescription(item.description)}</p>
                     
@@ -87,7 +91,7 @@ const Bollywood = () => {
                     <img src={item.img_url} alt={item.title} className='latest-image' />
                    
                     
-                    <h2 className='latest-title'>{item.title}</h2>
+                    <h2 className='latest-title'>{limittitle(item.title)}</h2>
 
                     <p className='latest-description'>{limitdescription(item.description)}</p>
                     
@@ -97,8 +101,8 @@ const Bollywood = () => {
             </div>
             </div>
       </div>
+      
         <div className='bolly-page'>
-
           <div className='bolly'>
             <div className='bolly-line'>
               <h1 className='bolly-text'>Top-Stories</h1>
@@ -123,22 +127,20 @@ const Bollywood = () => {
               </div>
             ))}
 
-            <button onClick={handleload} className='button'>LoadMore</button>
           </div>
 
           <div className='topbolly'>
-
             <div className='bolly-line'>
               <h1 className='bolly-text'>Top Posts</h1>
               <hr />
             </div>
               <div className='tp-box'>
             <Topbolly show={show} />
-            </div>
-           
+            </div>           
           </div>
 
         </div>
+        <button onClick={handleload} className='button'>LoadMore</button>
         <div className='addd'>
         <h1 className='advertisement-text'>Advertisement</h1>
         <div className='adpic'>       

@@ -54,10 +54,11 @@ const Footer = () => {
       </div>
       <div className='footer-text'>
         <h1 className='foot-text'>Get Ready to Enjoy on the Blog-Machine !!!</h1>
-        {/* {isVisible && ( */}
+       
         <button onClick={scrolltotop} className='to-top'>Back to top</button>
-        {/* )} */}
-      </div>     
+        
+      </div> 
+      {/* <button onClick={scrolltotop} className='to-top'>Back to top</button>     */}
    </div>
    </>
   )

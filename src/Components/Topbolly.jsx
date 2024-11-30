@@ -24,7 +24,11 @@ const Topbolly = ({show}) => {
      //function to limit the discription
   const limitdescription = (text)=>{
     const words = text.split(' ');
-    return words.slice(0,10).join(' ') + (words.length > 10 ? '...':'');
+    return words.slice(0,5).join(' ') + (words.length > 5 ? '...':'');
+  };
+  const limittitle = (text) => {
+    const words = text.split(' ');
+    return words.slice(0, 1).join(' ') + (words.length > 1 ? '...' : '');
   };
 
 
@@ -37,7 +41,7 @@ const Topbolly = ({show}) => {
                     <img src={item.img_url} alt={item.title} className='t-image' />
                     </div>
                     <div className='top-text'>
-                    <h2 className='t-title'>{item.title}</h2>
+                    <h2 className='t-title'>{limittitle(item.title)}</h2>
 
                     <p className='t-description'>{limitdescription(item.description)}</p>
                     </div>

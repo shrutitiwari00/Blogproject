@@ -27,12 +27,9 @@ const Categorydetail = () => {
   // Function to limit the description and title
   const limitdescription = (text) => {
     const words = text.split(' ');
-    return words.slice(0, 35).join(' ') + (words.length > 35 ? '...' : '');
+    return words.slice(0, 30).join(' ') + (words.length > 30 ? '...' : '');
   };
-  const limittitle = (text) => {
-    const words = text.split(' ');
-    return words.slice(0, 5).join(' ') + (words.length > 5 ? '...' : '');
-  };
+ 
   const today = new Date().toLocaleDateString();
 
   return (

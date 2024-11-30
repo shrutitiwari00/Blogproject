@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Tophome = () => {
 
     const data = useContext(Datacontext);
-    console.log(data);
+    // console.log(data);
 
     // const bollywoodData1 = data.filter((item) => item.category === "Bollywood" && item.id === 69);
     // console.log(bollywoodData1);
@@ -27,7 +27,7 @@ const Tophome = () => {
     };
     const limittitle = (text) => {
         const words = text.split(' ');
-        return words.slice(0, 3).join(' ') + (words.length > 3 ? '...' : '');
+        return words.slice(0, 1).join(' ') + (words.length > 1 ? '...' : '');
     }
 
 

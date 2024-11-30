@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState,useNavigate } from 'react'
 import Navbar from './Navbar'
 import './Navbar.css'
 import Footer from './Footer'
@@ -11,13 +11,15 @@ const Home = () => {
   // const [visisble, setVisible] = useState(7);
   // const[show,setShow]= useState(3);
   const data = useContext(Datacontext);
-  console.log(data);
+  // console.log(data);
 
   // const handleload = () => {
   //   setVisible((prev) => prev + 10);
   //   setShow((prev)=>prev+3);
   // };
 
+  // const [searchText,setSearchText] = useState("");
+  // const navigate = useNavigate();
 
   const selectedArray = [
     1, 2, 3, 8, 13, 15, 16, 17, 18, 22, 23, 24, 25, 26, 27, 45, 51, 53, 62, 65,
@@ -48,15 +50,34 @@ const Home = () => {
     const words = text.split(' ');
     return words.slice(0, 35).join(' ') + (words.length > 35 ? '...' : '');
   };
+  const limitdescription2 = (text) => {
+    const words = text.split(' ');
+    return words.slice(0, 30).join(' ') + (words.length > 30 ? '...' : '');
+  };
   const limittitle = (text) => {
     const words = text.split(' ');
     return words.slice(0, 5).join(' ') + (words.length > 5 ? '...' : '');
   };
+  const limittitle2 = (text) => {
+    const words = text.split(' ');
+    return words.slice(0, 2).join(' ') + (words.length > 2 ? '...' : '');
+  };
+
+  // const handleSearch=(e)=>{
+  //   e.preventDefault();
+  //   navigate(`search/${searchText}`);
+  // }
 
   return (
     <>
       <div className='mainbody'>
         <Navbar />
+
+        {/* <div className="search-container">
+          <input type="text" value={searchText} onChange={(e)=>setSearchText(e.target.value)} className="search-input"/>
+          <button onClick={handleSearch} className="search-button">Search</button>
+        </div> */}
+
         <div className='header-container'>
           <div className='box box1' style={{ backgroundImage: `url(${img1?.img_url})` }}>
           <div className="overlay">
@@ -84,8 +105,8 @@ const Home = () => {
                 <Link to={`/detail/${item.id}`} className='link-bolly' key={item.id}>
                   <div className='la-box'>
                     <img src={item.img_url} alt={item.title} className='latest-image' />
-                    <h2 className='latest-title'>{item.title}</h2>
-                    <p className='latest-description'>{limitdescription(item.description)}</p>
+                    <h2 className='latest-title'>{limittitle2(item.title)}</h2>
+                    <p className='latest-description'>{limitdescription2(item.description)}</p>
                   </div>
                 </Link>
               ))}
@@ -95,8 +116,8 @@ const Home = () => {
                 <Link to={`/detail/${item.id}`} className='link-bolly' key={item.id}>
                   <div className='la-box'>
                     <img src={item.img_url} alt={item.title} className='latest-image' />
-                    <h2 className='latest-title'>{item.title}</h2>
-                    <p className='latest-description'>{limitdescription(item.description)}</p>
+                    <h2 className='latest-title'>{limittitle2(item.title)}</h2>
+                    <p className='latest-description'>{limitdescription2(item.description)}</p>
                   </div>
                 </Link>
               ))}
@@ -106,8 +127,8 @@ const Home = () => {
                 <Link to={`/detail/${item.id}`} className='link-bolly' key={item.id}>
                   <div className='la-box'>
                     <img src={item.img_url} alt={item.title} className='latest-image' />
-                    <h2 className='latest-title'>{item.title}</h2>
-                    <p className='latest-description'>{limitdescription(item.description)}</p>
+                    <h2 className='latest-title'>{limittitle2(item.title)}</h2>
+                    <p className='latest-description'>{limitdescription2(item.description)}</p>
                   </div>
                 </Link>
               ))}
@@ -126,7 +147,7 @@ const Home = () => {
               <div key={item.id}>
                 <Link to={`/detail/${item.id}`} className='link-bolly'>
                   <div className='bollybox'>
-                    <div className='image'>
+                    <div className='image bollyimg1'>
                       <img src={item.img_url} alt={item.title} className='bollywood-image' />
                     </div>
                     <div className='dis-text'>

@@ -6,12 +6,10 @@ body {
 
   .head{
     width: 100%;
-    /* height: 18vh; */
     display: flex;
     justify-items: center;
     align-items: center;
-    justify-content: center;
-    /* padding: 3px; */
+    justify-content: center;   
     margin-top: 15px;
     border-radius: 6px;
   }
@@ -29,8 +27,7 @@ body {
   
   .sir{
     color: black;
-    font-size: 70px;
-    /* font-weight: 700; */
+    font-size: 70px;    
   }
   
   .post-box{
@@ -39,46 +36,34 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
   }
 
   .post-detail {
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    /* padding: 20px; */
-    /* margin: 0 auto; */
   }
   
   .post-title {
     font-size: 40px;
     margin: 10px;
-    /* margin-bottom: 20px; */
   }
   
   .post-image {
-    /* width: 95%;
-    height: 60vh; */
-    /* position: relative;  */
-    width: 97%;
     height: auto;
-    /* display: block; */
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     margin: 10px;
   }
   
   .post-description {
-    width: 95%;
     font-size: 30px;
     line-height: 1.6;
     margin: 10px;
   }
-  
-  /* Back Button Styling */
-  .back-button {
+    .back-button {
     background-color:black;
     color: white;
     border: none;
@@ -97,19 +82,14 @@ body {
 
   .latest-section{
     width: 97%;
-    /* height: 50vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-    /* margin: 10px ; */
-    /* padding: 10px 15px; */
 
   }
   .latest-text{
     margin-left: 50px;
-    /* padding: 15px; */
-  }
+    }
   .latest-div{
     width: 100%;
     display: flex;
@@ -118,9 +98,7 @@ body {
   }
   .latest-box{
     width: 30%;
-    /* height: 30vh; */
     margin: 10px;
-    /* box-shadow: 10px 10px 5px ghostwhite; */
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
   .la-box{
@@ -159,14 +137,13 @@ body {
     display: flex;
     align-items: center;
     align-content: center;
-    /* padding-top: 5px; */
   }
 
   .icon-box {
     height: 5vh;
     display: flex;
     gap: 10px;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    background-color: rgba(0, 0, 0, 0.7); 
     padding: 8px 12px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -210,86 +187,103 @@ body {
   }
   
   .like-share-icon:hover {
-    color: #007bff; /* Change to a hover color */
-    transform: scale(1.2); /* Slight enlarge on hover */
+    color: #007bff; 
+    transform: scale(1.2); 
   }
   
-
-  /* Footer Styles */
-  /* .footer-post {
-    margin-top: 40px;
-    font-size: 0.9rem;
-    text-align: center;
-    color: #777;
-  } */
+  @media (max-width: 768px) {
+    
+    .like-share-box {
+      left: 10px;
+      padding: 10px;
+      gap: 12px;
+      background-color: rgba(255, 255, 255, 0.95);
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
   
-  /* General mobile styles for small screens */
-@media (max-width: 768px) {
-  /* Adjust the like-share box */
-  .like-share-box {
-    left: 5px; /* Reduce the left offset */
-    padding: 8px;
-    gap: 15px; /* Reduce the spacing between icons */
-    background-color: rgba(255, 255, 255, 0.95);
-  }
+    .like-share-icon {
+      font-size: 22px; 
+    }
+  
+    .icon-box {
+      padding: 10px;
+      gap: 8px; 
+      align-self: center; 
+    }
+  
+    .social-icon {
+      font-size: 18px;
+    }
 
-  .like-share-icon {
-    font-size: 20px; /* Reduce icon size */
+    
+  
+    .post-image {
+      height: auto;
+    }
+  
+    .post-title {
+      font-size: 1.8rem; 
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    .post-description {
+      font-size: 1rem;
+      text-align: justify;
+      padding: 10px 15px; 
+      line-height: 1.6;
+    }
+  
+    .latest-div {
+      flex-direction: column; 
+      align-items: center; 
+      gap: 15px; 
+    }
+  
+    .latest-box {
+      width: 90%; 
+      margin-bottom: 15px; 
+    }
+  
+    .latest-image {
+      width: 100%; 
+      height: auto;
+    }
+  
+    .latest-title {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 5px;
+    }
+  
+    .latest-description {
+      font-size: 1rem;
+      text-align: justify;
+      padding: 0 10px;
+    }
+  
+    .user-details {
+      flex-direction: column; 
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+  
+    .user-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%; 
+    }
+  
+    .about {
+      text-align: center; 
+    }
+  
+    .footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
   }
-
-  /* Adjust the social media icon box */
-  .icon-box {
-    top: 5px;
-    right: 5px;
-    padding: 6px 10px;
-  }
-
-  .social-icon {
-    font-size: 18px; /* Reduce icon size */
-  }
-
-  /* Adjust the post image and text */
-  .post-image {
-    width: 100%; /* Ensure the image is responsive */
-    height: auto;
-  }
-
-  .post-title {
-    font-size: 1.5rem; /* Smaller title font size */
-    text-align: center; /* Center align title */
-  }
-
-  .post-description {
-    font-size: 1rem; /* Adjust font size for readability */
-    padding: 0 10px; /* Add padding for better spacing */
-  }
-
-  /* Adjust the latest section */
-  .latest-div {
-    flex-direction: column; /* Stack items vertically */
-    gap: 20px; /* Add spacing between sections */
-  }
-
-  .latest-box {
-    width: 100%; /* Full width for each box */
-  }
-
-  .latest-image {
-    width: 100%; /* Make images responsive */
-    height: auto;
-  }
-
-  .latest-title {
-    font-size: 1.2rem; /* Smaller title font size */
-  }
-
-  .latest-description {
-    font-size: 0.9rem; /* Smaller description font size */
-  }
-
-  /* Footer adjustments */
-  .footer {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-}
+  
